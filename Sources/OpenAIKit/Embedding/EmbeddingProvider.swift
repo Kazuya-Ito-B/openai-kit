@@ -1,3 +1,5 @@
+import NIO
+
 public struct EmbeddingProvider {
     
     private let requestHandler: RequestHandler
@@ -25,7 +27,6 @@ public struct EmbeddingProvider {
             input: input,
             user: user
         )
-        
         return try await requestHandler.perform(request: request)
     }
     
